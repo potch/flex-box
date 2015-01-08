@@ -1,4 +1,4 @@
-# <flex-box>
+# &lt;flex-box>
 
 A Custom Element to make the basics of flexbox easier to use
 
