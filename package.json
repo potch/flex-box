@@ -9,7 +9,8 @@
     "postbuild": "npm run minify",
     "minify": "uglifyjs index.js > index.min.js",
     "watch": "onchange 'src/*' -- npm run build",
-    "prewatch": "npm run build"
+    "prewatch": "npm run build",
+    "prepublish": "npm run build"
   },
   "author": "potch",
   "license": "ISC",
