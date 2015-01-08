@@ -1,0 +1,48 @@
+{
+  "name": "flex-box",
+  "version": "1.0.0",
+  "description": "flexible layout container component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -t 6to5ify -t html2js-browserify -t cssify src/index.js > index.js",
+    "postbuild": "npm run minify",
+    "minify": "uglifyjs index.js > index.min.js",
+    "watch": "onchange 'src/*' -- npm run build",
+    "prewatch": "npm run build"
+  },
+  "author": "potch",
+  "license": "ISC",
+  "devDependencies": {
+    "6to5ify": "^3.1.0",
+    "browserify": "^7.0.3",
+    "cssify": "^0.6.0",
+    "html2js-browserify": "0.0.2",
+    "onchange": "0.0.2",
+    "uglify-js": "^2.4.16"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "browserify": "^7.1.0",
+    "6to5ify": "^3.1.0",
+    "html2js-browserify": "^0.0.2",
+    "onchange": "^0.0.2",
+    "uglify-js": "^2.4.16",
+    "cssify": "^0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/potch/flex-box.git"
+  },
+  "keywords": [
+    "webcomponents",
+    "flexbox",
+    "customelement"
+  ],
+  "bugs": {
+    "url": "https://github.com/potch/flex-box/issues"
+  },
+  "homepage": "https://github.com/potch/flex-box"
+}
