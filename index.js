@@ -47,15 +47,37 @@ var _interopRequire = function (obj) {
 };
 
 /* jshint esnext:true */
-var t = _interopRequire(require("./template.html"));
-
 var css = _interopRequire(require("./flex.css"));
 
-// console.log(css);
+var FlexBoxElementProto = Object.create(HTMLElement.prototype);
 
-console.log(1);
+/*
+// Lifecycle methods
+FlexBoxElementProto.createdCallback = function () {
+};
 
-},{"./flex.css":2,"./template.html":4}],4:[function(require,module,exports){
-module.exports = '<div id="foo"></div>\n' +
-    '';
-},{}]},{},[3]);
+FlexBoxElementProto.attachedCallback = function () {
+};
+
+FlexBoxElementProto.detachedCallback = function () {
+};
+
+FlexBoxElementProto.attributeChangedCallback = function (attr, oldVal, newVal) {
+  if (attr in attrs) {
+    attrs[attr].call(this, oldVal, newVal);
+  }
+};
+
+// Attribute handlers
+var attrs = {
+  'attr': function (oldVal, newVal) {
+  }
+};
+*/
+
+// Register the element
+window.FlexBoxElement = document.registerElement("flex-box", {
+  prototype: FlexBoxElementProto
+});
+
+},{"./flex.css":2}]},{},[3]);

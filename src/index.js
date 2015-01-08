@@ -1,7 +1,33 @@
 /* jshint esnext:true */
-import t from './template.html';
 import css from './flex.css';
 
-// console.log(css);
+var FlexBoxElementProto = Object.create(HTMLElement.prototype);
 
-console.log(1);
+/*
+// Lifecycle methods
+FlexBoxElementProto.createdCallback = function () {
+};
+
+FlexBoxElementProto.attachedCallback = function () {
+};
+
+FlexBoxElementProto.detachedCallback = function () {
+};
+
+FlexBoxElementProto.attributeChangedCallback = function (attr, oldVal, newVal) {
+  if (attr in attrs) {
+    attrs[attr].call(this, oldVal, newVal);
+  }
+};
+
+// Attribute handlers
+var attrs = {
+  'attr': function (oldVal, newVal) {
+  }
+};
+*/
+
+// Register the element
+window.FlexBoxElement = document.registerElement('flex-box', {
+  prototype: FlexBoxElementProto
+});
