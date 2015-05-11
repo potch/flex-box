@@ -38,6 +38,7 @@
     "url": "https://github.com/potch/flex-box.git"
   },
   "keywords": [
+    "web-components",
     "webcomponents",
     "flexbox",
     "customelement"
